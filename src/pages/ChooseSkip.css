@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .skip-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  
+  .choose-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #222;
+    text-align: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: #f5f7fa;
+  }
+  
+  .choose-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  
+  
+  .skip-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  
+  
+  .skip-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    padding: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-height: 300px;
+    height: 100%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .skip-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  
+  .skip-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skip-card h4 {
+    margin: 0.25rem 0 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #222;
+  }
+  
+  .skip-card p {
+    margin: 0.25rem 0;
+    color: #666;
+  }
+  
+  .skip-card strong {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #007c7c;
+  }
+  
+  .skip-badge {
+    background: #eee;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+  }
+  
+  .skip-card:hover .skip-badge {
+    background: #008080;
+    color: #fff;
+  }
+  
+  
+  .skip-card.selected {
+    border-color: #008080;
+    background: #e0f7f7;
+    box-shadow: 0 0 8px rgba(0, 128, 128, 0.3);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  
+  .skip-card.selected .skip-badge {
+    background: #008080;
+    color: #fff;
+  }
+  
+  .skip-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    padding: 1rem;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    z-index: 10;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+  
+  .btn-primary {
+    background-color: #008080;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    background-color: #006666;
+  }
+  
+
+  @media (max-width: 768px) {
+    .choose-container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  
+    .skip-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+  }
+  
